@@ -14,13 +14,12 @@ public class MakeChange {
 		double amtTendered = enterAmtTendered(itemPrice);
 		double amtChange = amtTendered - itemPrice;
 		
-		System.out.println("Amount: "+itemPrice + ", " 
-				+ "Tendered: " + amtTendered);
-
+		System.out.printf("Amount: %.2f, Tendered: %.2f", itemPrice, amtTendered);
+		System.out.println();
+		
 		// TODO If amt tendered is more than the cost of item
 		// display the number of bills and coins that should be
 		// given to the customer.
-		//displayNumBillsCoins(itemPrice, amtTendered);
 		// need to count 20, 10, 5, 1, .25, .10, .05, .01
 		int bill20 = 0, bill10 = 0, bill05 = 0, bill01 = 0;
 		int coin25 = 0, coin10 = 0, coin05 = 0, coin01 = 0;
@@ -67,7 +66,6 @@ public class MakeChange {
 		}
 		
 		System.out.println(result);
-
 		
 		kb.close();
 	}
@@ -105,19 +103,4 @@ public class MakeChange {
 			return enterAmtTendered(itemPrice);
 		}
 	}
-	/*
-	public static void displayNumBillsCoins(double itemPrice, 
-											double amtTendered) {
-		// TODO If amt tendered is more than the cost of item
-		// display the number of bills and coins that should be
-		// given to the customer.
-		//bills: 20, 10, 5, 1
-		//coins: .25, .10, .05, .01
-		
-		//while (amtTendered >)
-		
-		
-		
-	}
-	public static int billsCoinCount ()  */
 }
